@@ -49,3 +49,9 @@ function totalPointsUpdate(){
     console.log(points);
     console.log(clickerPoints);
 }
+
+document.getElementById("big-red-button").addEventListener("click", almostEndGame);
+
+function almostEndGame(){
+    document.getElementById("the-button").innerHTML
+}
