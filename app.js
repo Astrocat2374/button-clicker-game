@@ -1,8 +1,11 @@
+var endgameParent = document.getElementById("endgame");
+var buttonBuyChild = document.getElementById("big-red-button");
 var points = 0;
 var clickerPoints = 5;
 var clickerUpgradeCost = 20;
 var autoClicker = 0;
 var autoClickerUpgradeCost = 50;
+var bigRedCost = 0;
 
 document.getElementById("clicker").addEventListener("click", clickerPointsUpgrade);
 
@@ -53,5 +56,10 @@ function totalPointsUpdate(){
 document.getElementById("big-red-button").addEventListener("click", almostEndGame);
 
 function almostEndGame(){
-    document.getElementById("the-button").innerHTML
+    if (points >= bigRedCost) {
+        points = points - bigRedCost;
+        endgameParent.removeChild(buttonBuyChild);
+    } else {
+        alert("You can't afford this!");
+    }
 }
