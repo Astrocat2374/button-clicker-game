@@ -5,7 +5,9 @@ var clickerPoints = 5;
 var clickerUpgradeCost = 20;
 var autoClicker = 0;
 var autoClickerUpgradeCost = 50;
-var bigRedCost = 0;
+var superClicker = 0;
+var superClickerUpgradeCost = 500;
+var bigRedCost = 1000000;
 
 document.getElementById("clicker").addEventListener("click", clickerPointsUpgrade);
 
@@ -53,9 +55,9 @@ function totalPointsUpdate(){
     console.log(clickerPoints);
 }
 
-document.getElementById("big-red-button").addEventListener("click", almostEndGame);
+document.getElementById("big-red-button").addEventListener("click", endGame);
 
-function almostEndGame(){
+function endGame(){
     if (points >= bigRedCost) {
         points = points - bigRedCost;
         endgameParent.removeChild(buttonBuyChild);
