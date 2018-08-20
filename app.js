@@ -22,8 +22,6 @@ function clickerUpgrade(){
         points = points - clickerUpgradeCost;
         clickerUpgradeCost = clickerUpgradeCost * 3;
         clickerPoints = clickerPoints * 2;
-        console.log(clickerUpgradeCost);
-        console.log(clickerPoints);
     } else {
         alert("You can't afford this!");
     }
@@ -51,8 +49,18 @@ setInterval(totalPointsUpdate, 50);
 
 function totalPointsUpdate(){
     document.getElementById("points").innerHTML = points;
-    console.log(points);
-    console.log(clickerPoints);
+
+    if (points >= clickerUpgradeCost){
+        document.getElementById("clicker-upgrade").style.backgroundColor = "#5aff5a";
+    } else {
+        document.getElementById("clicker-upgrade").style.backgroundColor = "#ff5a5a";
+    }
+
+    if (points >= autoClickerUpgradeCost){
+        document.getElementById("auto-clicker").style.backgroundColor = "#5aff5a";
+    } else {
+        document.getElementById("auto-clicker").style.backgroundColor = "#ff5a5a";
+    }
 }
 
 document.getElementById("big-red-button").addEventListener("click", endGame);

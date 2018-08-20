@@ -1,0 +1,27 @@
+body {
+    font-family: 'Kosugi Maru', sans-serif;
+}
+
+.upgrade-buttons{
+    display: inline-block;
+    background-color: #ff5a5a;
+    border: none;
+    text-align: center;
+    width: 144px;
+    height: 72px;
+    font-size: 24px;
+    padding: 8px;
+}
+
+#clicker{
+    font-size: 24px;
+    margin: auto;
+    border: none;
+    text-align: center;
+    width: 80%;
+    height: 288px;
+}
+
+#clicker:active{
+    background-color: #66b7ff;
+}
