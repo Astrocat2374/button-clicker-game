@@ -1,5 +1,6 @@
 body {
     font-family: 'Kosugi Maru', sans-serif;
+    text-align: center;
 }
 
 .upgrade-buttons{
@@ -20,8 +21,4 @@ body {
     text-align: center;
     width: 80%;
     height: 288px;
-}
-
-#clicker:active{
-    background-color: #66b7ff;
 }

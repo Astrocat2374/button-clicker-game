@@ -7,7 +7,8 @@ var autoClicker = 0;
 var autoClickerUpgradeCost = 50;
 var superClicker = 0;
 var superClickerUpgradeCost = 500;
-var bigRedCost = 1000000;
+var bigRedCost = 10000;
+var rick = new Audio(music/surprise.mp3);
 
 document.getElementById("clicker").addEventListener("click", clickerPointsUpgrade);
 
@@ -27,7 +28,7 @@ function clickerUpgrade(){
     }
 }
 
-document.getElementById("autoclicker").addEventListener("click", autoClickerUpgrade);
+document.getElementById("auto-clicker").addEventListener("click", autoClickerUpgrade);
 
 function autoClickerUpgrade(){
     if (points >= autoClickerUpgradeCost) {
